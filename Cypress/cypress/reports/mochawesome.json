@@ -1,0 +1,160 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-11T08:00:33.782Z",
+    "end": "2024-11-11T08:00:53.639Z",
+    "duration": 19857,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7cae71a3-42cd-422c-bda5-73e44721c462",
+      "title": "",
+      "fullFile": "cypress/e2e/login.cy.ts",
+      "file": "cypress/e2e/login.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3388c0e5-29bc-42bc-a16f-6032309f9cc5",
+          "title": "User Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login with valid credentials",
+              "fullTitle": "User Login should login with valid credentials",
+              "timedOut": null,
+              "duration": 6205,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(testData.validUser);\ncy.checkDashboardVisibility();",
+              "err": {},
+              "uuid": "64fdcc9c-9619-4c23-99c1-264338cfc964",
+              "parentUUID": "3388c0e5-29bc-42bc-a16f-6032309f9cc5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should fail login with invalid credentials",
+              "fullTitle": "User Login should fail login with invalid credentials",
+              "timedOut": null,
+              "duration": 4829,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(testData.invalidUser);\ncy.assertInvalidCredentials();",
+              "err": {},
+              "uuid": "d49bb633-ef44-4aab-a1da-15d388a8354c",
+              "parentUUID": "3388c0e5-29bc-42bc-a16f-6032309f9cc5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show Required on empty  fields",
+              "fullTitle": "User Login should show Required on empty  fields",
+              "timedOut": null,
+              "duration": 1910,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(testData.emptyUser);\ncy.assertErrorMessage();",
+              "err": {},
+              "uuid": "a0db5151-10d1-4b4f-8461-cd6852073b4b",
+              "parentUUID": "3388c0e5-29bc-42bc-a16f-6032309f9cc5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should show Required on not provided field",
+              "fullTitle": "User Login should show Required on not provided field",
+              "timedOut": null,
+              "duration": 1484,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(testData.partialUser);\ncy.assertErrorMessage();",
+              "err": {},
+              "uuid": "b47379c3-0b10-4bcc-a3b2-6ef818c30202",
+              "parentUUID": "3388c0e5-29bc-42bc-a16f-6032309f9cc5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "64fdcc9c-9619-4c23-99c1-264338cfc964",
+            "d49bb633-ef44-4aab-a1da-15d388a8354c",
+            "a0db5151-10d1-4b4f-8461-cd6852073b4b",
+            "b47379c3-0b10-4bcc-a3b2-6ef818c30202"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14428,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
